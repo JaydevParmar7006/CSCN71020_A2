@@ -90,14 +90,20 @@ void setWidth(int input, int *width) {
 	}
 }
 
-int getPerimeter(int *length, int *width) {
-	int perimeter = 2 * (*length + *width);
-	return perimeter;
+int getPerimeter(int* length, int* width) {
+	if (*length < 0 || *width < 0) 
+	{
+		return 0;  
+	}
+	return 2 * (*length) + 2 * (*width);
 }
 
-int getArea(int *length, int *width) {
-	int area = *length * *width;
-	return area;
+int getArea(int* length, int* width) {
+	if (*length < 0 || *width < 0) 
+	{
+		return 0;  
+	}
+	return (*length) * (*width);
 }
 
 void printWelcomeMenu() {

@@ -23,19 +23,19 @@ namespace BCSRecTests
 	{
 	public:
 		
-		TEST_METHOD(Test_GetPerimeter_WithValidInputs_ReturnsCorrectPerimeter)
+		TEST_METHOD(Test_GetPerimeter_WithInvalidLength_ReturnsZero)
 		{
-			int length = 4;
+			int length = -4;
 			int width = 6;
 			int result = getPerimeter(&length, &width);
-			Assert::AreEqual(20, result);
+			Assert::AreEqual(0, result);
 		}
-		TEST_METHOD(Test_GetArea_WithValidInputs_ReturnsCorrectArea)
+		TEST_METHOD(Test_GetArea_WithInvalidWidth_ReturnsZero)
 		{
 			int length = 4;
-			int width = 75;
+			int width = -75;
 			int result = getArea(&length, &width);
-			Assert::AreEqual(300, result);
+			Assert::AreEqual(0, result);
 		}
 		TEST_METHOD(Test_SetLength_WithValidInput_ReturnsValidLength)
 		{
