@@ -71,19 +71,27 @@ int getIntInput(char message[]) {
 }
 
 void setLength(int input, int *length) {
-	if (input >= 0 && input < 100) {
+	if (input >= 1 && input <= 99) {
 		*length = input;
+	}
+	else
+	{
+		printf("Invalid input. Length is not under the range 1 and 99.\n ");
 	}
 }
 
 void setWidth(int input, int *width) {
-	if (input > 0 && input <= 100) {
+	if (input >= 1 && input <= 99) {
 		*width = input;
+	}
+	else
+	{
+		printf("Invalid input. Width is not under the range 1 and 99.\n ");
 	}
 }
 
 int getPerimeter(int *length, int *width) {
-	int perimeter = *length + *length + *width;
+	int perimeter = 2 * (*length + *width);
 	return perimeter;
 }
 
